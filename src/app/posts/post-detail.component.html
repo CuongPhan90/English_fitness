@@ -1,0 +1,158 @@
+<header class="general-header header-layout-one">
+  <div class="general-header-inner">
+    <div class="header-top-wrapper">
+      <div class="header-top-inner">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+              <div class="search">
+                <i class="fa fa-search" aria-hidden="true"></i>
+                <input type="search" placeholder="Search .........." />
+              </div>
+            </div>
+            <!-- // col -->
+            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+              <div class="social-networks">
+                <ul class="social-links">
+                  <li>
+                    <a href="facebook.com">
+                      <i class="fab fa-facebook-f"></i>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="youtube.com"> <i class="fab fa-youtube"></i> </a>
+                  </li>
+                </ul>
+              </div>
+              <!-- // social-networks -->
+            </div>
+            <!-- // col -->
+          </div>
+          <!-- // row -->
+        </div>
+        <!-- // container -->
+      </div>
+      <!-- // header-top-inner -->
+    </div>
+    <!-- // header-top-wrapper -->
+    <div class="container">
+      <div class="site-info">
+        <img
+          class="logo"
+          src="https://firebasestorage.googleapis.com/v0/b/flipapp-1f726.appspot.com/o/images%2Fdata_image%2FLogo.png?alt=media&token=c12053a3-e6d5-427a-a5d4-1b19e61efe30"
+          alt="Flip logo"
+        />
+        <!-- <img src="./assets/dist/img/logo.png" alt="logo"> -->
+      </div>
+      <!-- // site-info -->
+    </div>
+    <!-- // container -->
+    <nav class="nav-bar nav-pills ">
+      <ul class="nav justify-content-center">
+        <li class="nav-item">
+          <a class="nav-link text-dark" [routerLink]="['/homepage']"
+            >Trang Chủ</a
+          >
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active btn-light" [routerLink]="['/posts']"
+            >Bài Viết Hay</a
+          >
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-dark" [routerLink]="['/about']">About me</a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+  <!-- // general-header-inner -->
+</header>
+
+<div class="container">
+  <div
+    class="card author-photo"
+    style="width: 100%; margin-bottom: 2.5%; margin-top: 2.5%;"
+  >
+    <img *ngIf="!post.videoURL" class="card-img-top" [src]="post.imageUrl" alt="Card image cap" />
+    <div *ngIf="!post.imageUrl"  class="embed-responsive embed-responsive-16by9">
+      <iframe
+        class="e2e-iframe-trusted-src"
+        [src]="post.videoURL | youtube"
+        frameborder="0"
+        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen
+      ></iframe>
+    </div>
+    <div class="card-body">
+      <h2 class="card-title">{{ post.postTitle }}</h2>
+      <span>{{ post.postAuthor }} - {{ post.releaseDate | date }}</span>
+      <!-- <p class="card-text">{{ post.postDetail}}</p> -->
+      <hr />
+      <h3>{{ post.postHeadings.heading_1 }}</h3>
+      <p>{{ post.postDetail.detail_1 }}</p>
+      <h3>{{ post.postHeadings.heading_2 }}</h3>
+      <p>{{ post.postDetail.detail_2 }}</p>
+      <h3>{{ post.postHeadings.heading_3 }}</h3>
+      <p>{{ post.postDetail.detail_3 }}</p>
+      <h3>{{ post.postHeadings.heading_4 }}</h3>
+      <p>{{ post.postDetail.detail_4 }}</p>
+      <h3>{{ post.postHeadings.heading_5 }}</h3>
+      <p>{{ post.postDetail.detail_5 }}</p>
+    </div>
+    <div class="card-footer border">
+      <button class="btn btn-info" (click)="onBack()" style="width:100px">
+        <i class="fa fa-chevron-left text-white"></i> Back
+      </button>
+    </div>
+  </div>
+</div>
+
+<!--
+  <div class="container">
+    <div class='card' *ngIf='post'>
+      <div class='card-header bg-dark text-white'>
+        {{pageTitle + ': ' + post.postTitle}}
+      </div>
+
+      <div class='card-body'>
+        <div class='row'>
+          <div class='col-md-8'>
+            <div class='row'>
+              <div class='col-md-4'>Name:</div>
+              <div class='col-md-8'>{{post.postTitle}}</div>
+            </div>
+            <div class='row'>
+              <div class='col-md-4'>Author:</div>
+              <div class='col-md-8'>{{post.postAuthor}}</div>
+            </div>
+            <div class='row'>
+              <div class='col-md-4'>Description:</div>
+              <div class='col-md-8'>{{post.postDetail}}</div>
+            </div>
+            <div class='row'>
+              <div class='col-md-4'>Availability:</div>
+              <div class='col-md-8'>{{post.releaseDate}}</div>
+            </div>
+            <div class='row'>
+              <div class='col-md-4'>5 Star Rating:</div>
+              <div class='col-md-8'>
+                <app-star [rating]='post.starRating'>
+                </app-star>
+              </div>
+            </div>
+          </div>
+
+          <div class='col-md-4'>
+            <img class='center-block img-responsive' [style.width.px]='200' [style.margin.px]='2' [src]='post.imageUrl' [title]='post.postTitle'>
+          </div>
+        </div>
+      </div>
+
+      <div class='card-footer'>
+        <button class='btn btn-primary' (click)='onBack()' style='width:100px'>
+          <i class='fa fa-chevron-left'></i> Back
+        </button>
+      </div>
+    </div>
+  </div>
+-->

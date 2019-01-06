@@ -1,0 +1,98 @@
+<header>
+  <div class="bg bg-text-box text-white">
+    <h1>Nơi chia sẻ bí quyết tự học English
+      <br>tìm hiểu cách học</h1>
+    <a class="btn btn-full" [routerLink]="['/posts']">Listening</a>
+    <a class="btn btn-ghost" href="#">Speaking</a>
+  </div>
+</header>
+
+<section class="section-latest-posts" id="posts">
+  <div class="container">
+    <h2>{{ pageTitle }}</h2>
+    <div class="row">
+      <div class="col-md-4 step-box " *ngFor='let post of filterPosts'>
+        <a [routerLink]="['/posts', post.postId]">
+          <img [src]="post.imageUrl" [alt]="post.postTitle">
+        </a>
+        <h3>{{ post.postTitle }}</h3>
+        <div class="post-feature ">
+          <i class="fas fa-user-circle icon-small"></i>
+          {{ post.postAuthor}} | {{ post.releaseDate }}
+        </div>
+        <div class="post-feature">
+          <i class="fas fa-envelope-open-text icon-small"></i>
+          {{ post.postDetail.detail_1 | truncate: 50 }}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section-quotes">
+  <div class="container">
+    <h2>Remember that you are not alone...</h2>
+    <div class="row">
+      <div class="col-md-4 box">
+        <blockquote>
+          It does not matter where you go and what you study, what matters most is what you share with yourself and the world.
+        </blockquote>
+        <cite>
+          <img src="https://firebasestorage.googleapis.com/v0/b/flipapp-1f726.appspot.com/o/images%2Fdata_image%2Fperson1.jpg?alt=media&token=2ef1618f-183c-4bfc-a7c7-8615ca697be3" alt="Santosh Kalwar">Santosh Kalwar</cite>
+      </div>
+      <div class="col-md-4 box">
+        <blockquote>
+          As every divided kingdom falls, so every mind divided between many studies confounds and saps itself.
+        </blockquote>
+        <cite>
+          <img src="https://firebasestorage.googleapis.com/v0/b/flipapp-1f726.appspot.com/o/images%2Fdata_image%2Fperson2.jpg?alt=media&token=5332b509-1f6c-456c-80b9-a15e24dcb1e7" alt="Leonardo da Vinci">Leonardo da Vinci</cite>
+      </div>
+      <div class="col-md-4 box">
+        <blockquote>
+          Every beginner possesses a great potential to be an expert in his or her chosen field.
+        </blockquote>
+        <cite>
+          <img src="https://firebasestorage.googleapis.com/v0/b/flipapp-1f726.appspot.com/o/images%2Fdata_image%2Fperson3.jpg?alt=media&token=f31cd7a9-5f59-44a8-a719-1b91777b3860" alt="Lailah Gifty Akita, Think Great: Be Great!">Lailah Gifty Akita</cite>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6">
+        <ul class="footer-nav">
+          <li>
+            <a [routerLink]="['/about']">About us</a>
+          </li>
+          <li>
+            <a [routerLink]="['/posts']">Blog</a>
+          </li>
+          <li>
+            <a href="#">Press</a>
+          </li>
+        </ul>
+      </div>
+      <div class="col-md-6">
+        <ul class="social-icons">
+          <li>
+            <a target="_blank" rel="noopener noreferrer" href="https://www.facebook.com/flipenglishaway/">
+              <i class="fab fa-facebook"></i>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <i class="fab fa-google-plus-square"></i>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="row">
+      <p style="color: white;" id="copy">
+        Copyright &copy; 2018 Flip - English Studying Website. All rights reserved.
+      </p>
+    </div>
+  </div>
+</footer>

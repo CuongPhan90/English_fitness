@@ -1,0 +1,35 @@
+<div class="container" *ngIf="router.url === '/homepage'">
+  <nav>
+    <div class="float-left">
+      <a href="#">
+        <img
+          class="logo"
+          src="https://firebasestorage.googleapis.com/v0/b/flipapp-1f726.appspot.com/o/images%2Fdata_image%2FLogo.png?alt=media&token=c12053a3-e6d5-427a-a5d4-1b19e61efe30"
+          alt="Flip logo"
+        />
+      </a>
+    </div>
+
+    <div class="menu-inline float-right">
+      <ul class="main-nav">
+        <li><a [routerLink]="['/homepage']">Trang Chủ</a></li>
+        <li><a [routerLink]="['/posts']">Bài Viết Hay</a></li>
+        <li><a [routerLink]="['/about']">About me</a></li>
+        <li><a [routerLink]="['/feedback']">Đóng góp ý kiến</a></li>
+      </ul>
+    </div>
+    <div class="dropdown float-right">
+        <button class="btn btn-danger dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Menu
+        </button>
+        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+          <a class="dropdown-item" [routerLink]="['/homepage']">Trang Chủ</a>
+          <a class="dropdown-item" [routerLink]="['/posts']">Bài Viết Hay</a>
+          <a class="dropdown-item" [routerLink]="['/about']">About me</a>
+          <a class="dropdown-item" [routerLink]="['/feedback']">Đóng góp ý kiến</a>
+        </div>
+      </div>
+  </nav>
+</div>
+
+<router-outlet></router-outlet>

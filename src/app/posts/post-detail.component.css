@@ -1,0 +1,126 @@
+
+/* ----------------------------------------------
+/* Header */
+/*----------------------------------------------*/
+
+.general-header .header-top-wrapper {
+  border-bottom: 1px solid #e0e0e0;
+  margin-bottom: 20px;
+  padding: 10px 0 15px 0;
+}
+
+.search {
+  box-sizing: border-box;
+  display: inline;
+}
+
+.search i {
+  margin-right: 10px;
+  position: relative;
+  top: 3px;
+  font-size: 18px;
+}
+
+.search input {
+  border: 0;
+  border-bottom: 1px solid #111;
+  width: 80px;
+  letter-spacing: 2px;
+  font-weight: bold;
+  font-size: 12px;
+  padding: 5px 0px 5px 5px;
+  -webkit-transition: 0.5s all cubic-bezier(0.55, 0, 0.1, 1);
+  transition: 0.5s all cubic-bezier(0.55, 0, 0.1, 1);
+  overflow: visible;
+}
+
+.search input:focus {
+  outline: 0;
+  width: 200px;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.general-header .header-top-inner .social-networks ul {
+  text-align: right;
+  list-style: none;
+  margin: 0px;
+  padding: 0px;
+  color: #111;
+}
+
+.general-header .header-top-inner .social-networks li {
+  display: inline-block;
+  margin-right: 5px;
+}
+
+.general-header .header-top-inner .social-networks ul li a,
+.sidebar
+  .sidebar-inner
+  .widget
+  .widget-extra-info-holder
+  .widget-author-social
+  .social-links
+  li
+  a,
+footer
+  .footer-inner
+  .footer-block
+  .footer-widget-content
+  .social-networks
+  .social-links
+  li
+  a {
+  width: 35px;
+  height: 35px;
+  border: 1px solid #e0e0e0;
+  border-radius: 100%;
+  padding: 6px;
+  vertical-align: middle;
+  display: inline-block;
+  text-align: center;
+  line-height: 20px;
+}
+
+i {
+  color: #1111114d;
+}
+
+i.fa-facebook-f:hover {
+  color: #4267b2;
+  transition: color 0.5;
+}
+
+i.fa-youtube:hover {
+  color: #db554e;
+  transition: color 0.5;
+}
+
+.header-layout-one .general-header-inner .site-info {
+  text-align: center;
+  padding: 10px 0;
+  margin: 10px 0px 40px 0px;
+}
+
+/* ----------------------------------------------
+/* Menu */
+/*----------------------------------------------*/
+
+nav {
+  border-top: 1px solid #e0e0e0;
+  border-bottom: 1px solid #e0e0e0;
+  padding: 10px 10px;
+}
+
+
+
+
+
+
+/* ----------------------------------------------
+/* Swiper */
+/*----------------------------------------------*/
+
+
+
+

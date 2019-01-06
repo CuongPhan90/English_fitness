@@ -1,0 +1,177 @@
+/* You can add global styles to this file, and also import other style files */
+@import "~bootstrap/dist/css/bootstrap.min.css";
+@import "~font-awesome/css/font-awesome.min.css";
+
+
+
+/*
+Original Color: #DB554E
+
+*/
+
+/*----------------------------------------------*/
+/* Basic Step */
+/*----------------------------------------------*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  background-color: #fff;
+  color: #555;
+  font-family: 'Lato', 'Arial', sans-serif;
+  font-weight: 300;
+  font-size: 20px;
+  text-rendering: optimizeLegibility;
+  overflow-x: hidden;
+}
+
+.clearfix {zoom: 1}
+.clearfix:after {
+  content: '.';
+  clear: both;
+  display: block;
+  height: 0;
+  visibility: hidden;
+}
+
+/*----------------------------------------------*/
+/* Resuable Components */
+/*----------------------------------------------*/
+
+
+section {
+  padding: 50px 0;
+}
+
+.box {
+  padding: 1%;
+}
+
+/*------Headings-----*/
+
+h1,
+h2,
+h3 {
+  font-weight: 300;
+  text-transform: uppercase;
+}
+
+h1 {
+  margin-top: 0;
+  margin-bottom: 20px;
+  color: #fff;
+  font-size: 250%;
+  word-spacing: 4px;
+  letter-spacing: 1px;
+}
+
+h2 {
+  font-size: 180%;
+  word-spacing: 2px;
+  text-align: center;
+  margin-bottom: 30px;
+  letter-spacing: 1px;
+}
+
+
+h2:after {
+  display: block;
+  height: 2px;
+  background-color: #DB554E;
+  content: " ";
+  width: 100px;
+  margin: 0 auto;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+h3 {
+  font-size: 110%;
+  margin-bottom: 15px;
+}
+
+
+/*----------------------------------------------*/
+/* Responsive web */
+/*----------------------------------------------*/
+
+/* Big tablet to 1200px */
+@media only screen and (max-width: 1200px) {
+  .bg-text-box {
+   width: 100%;
+   padding: 0 20%;
+  }
+
+}
+
+/* Small tablet to big tablets: from 768 to 1023 */
+@media only screen and (max-width: 1023px) {
+  .section-latest-posts {
+    margin-bottom: 5%;
+    margin-top: -5%;
+  }
+
+  .bg-text-box {
+    padding: 0 20%;
+    margin-left: 7%;
+  }
+
+  .bg-text-box h1 {
+    font-size: 220%;
+  }
+
+  .post-photo {
+    width: 80%;
+    height: 200px;
+  }
+
+
+}
+
+/* Small phones to small tablets: from 481 to 767 */
+@media only screen and (max-width: 767px) {
+  body {
+    font-size: 16px;
+  }
+
+
+  .bg-text-box {
+    margin-left: 10%;
+    float: left;
+    size: 150%;
+    text-align: center;
+  }
+
+  .bg-text-box h1 {
+    font-size: 150%;
+  }
+
+  .main-nav { display: none;}
+
+  .section-quotes {
+    padding-bottom: 180%;
+  }
+
+
+}
+
+
+/* Small phones: from 0 to 480px */
+@media only screen and (max-width: 480px) {
+  body {
+    font-size: 14px;
+  }
+
+  .bg-text-box h1 {
+    font-size: 120%;
+    text-align: center;
+  }
+
+  .section-quotes {
+    padding-bottom: 200%;
+  }
+}
